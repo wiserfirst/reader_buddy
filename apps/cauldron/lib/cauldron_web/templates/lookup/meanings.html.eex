@@ -1,0 +1,14 @@
+<%= for meaning <- @meanings do %>
+  <div class="row">
+    <strong><%= meaning["definition"] %></strong>
+    <br>
+    <%= if meaning["examples"] do %>
+    <span>Examples: </span>
+      <ul>
+        <%= for example <- meaning["examples"] do %>
+          <li> <%= example %> </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+<% end %>

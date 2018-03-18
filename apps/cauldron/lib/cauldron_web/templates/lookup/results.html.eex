@@ -1,0 +1,9 @@
+<div class="container">
+  <%= for result <- @results do %>
+    <div class="row">
+      <h3><%= result["word"] %></h3>
+      <h4><%= result["part_of_speech"] %></h4>
+    </div>
+    <%= render "meanings.html", meanings: result["meanings"] %>
+  <% end %>
+</div>
