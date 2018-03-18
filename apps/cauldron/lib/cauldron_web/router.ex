@@ -16,9 +16,9 @@ defmodule CauldronWeb.Router do
   scope "/", CauldronWeb do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
-    get "/lookup", LookupController, :index
-    post "/lookup/create", LookupController, :create
+    get "/welcome", PageController, :index
+    get "/", LookupController, :index
+    post "/create", LookupController, :create
   end
 
   # Other scopes may use custom stacks.
